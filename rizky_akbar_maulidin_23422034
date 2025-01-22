@@ -1,0 +1,137 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/rizkyakbarmaulidin1/detecion/blob/main/rizky_akbar_maulidin_23422034\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "AC2BRNEtg3Tu"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from graphviz import Digraph\n",
+        "\n",
+        "# Tree 1\n",
+        "def create_tree_1():\n",
+        "    tree_1 = Digraph(name=\"Pohon_1\", format=\"png\")\n",
+        "    tree_1.attr(rankdir=\"TB\")\n",
+        "\n",
+        "    # Nodes and edges for Tree 1\n",
+        "    tree_1.node(\"Hadi\")\n",
+        "    tree_1.node(\"Ratno\")\n",
+        "    tree_1.edge(\"Hadi\", \"Desi\")\n",
+        "    tree_1.edge(\"Hadi\", \"Wahyu\")\n",
+        "    tree_1.edge(\"Ratno\", \"Maulidin\")\n",
+        "    tree_1.edge(\"Ratno\", \"Ardi\")\n",
+        "\n",
+        "    tree_1.edge(\"Desi\", \"Bayu\")\n",
+        "    tree_1.edge(\"Bayu\", \"Fahrul\")\n",
+        "    tree_1.edge(\"Fahrul\", \"Wanda\")\n",
+        "    tree_1.edge(\"Bayu\", \"Tari\")\n",
+        "\n",
+        "    tree_1.edge(\"Desi\", \"Nurul\")\n",
+        "    tree_1.edge(\"Nurul\", \"Ali\")\n",
+        "    tree_1.edge(\"Nurul\", \"Gunawan\")\n",
+        "\n",
+        "    tree_1.edge(\"Wahyu\", \"Yanto\")\n",
+        "\n",
+        "    tree_1.edge(\"maulidin\", \"Hamzah\")\n",
+        "\n",
+        "    tree_1.edge(\"rizky\", \"Eka\")\n",
+        "    tree_1.edge(\"Eka\", \"Anggun\")\n",
+        "\n",
+        "    tree_1.edge(\"Ardi\", \"Mira\")\n",
+        "    tree_1.edge(\"Mira\", \"Bastian\")\n",
+        "    tree_1.edge(\"Bastian\", \"Boy\")\n",
+        "\n",
+        "    return tree_1\n",
+        "\n",
+        "# Tree 2\n",
+        "def create_tree_2():\n",
+        "    tree_2 = Digraph(name=\"Pohon_2\", format=\"png\")\n",
+        "    tree_2.attr(rankdir=\"TB\")\n",
+        "\n",
+        "    # Nodes and edges for Tree 2\n",
+        "    tree_2.node(\"6\")\n",
+        "    tree_2.node(\"7\")\n",
+        "\n",
+        "    tree_2.edge(\"6\", \"2\")\n",
+        "    tree_2.edge(\"6\", \"8\")\n",
+        "    tree_2.edge(\"7\", \"4\")\n",
+        "    tree_2.edge(\"7\", \"5\")\n",
+        "\n",
+        "    tree_2.edge(\"2\", \"1\")\n",
+        "    tree_2.edge(\"1\", \"0\")\n",
+        "    tree_2.edge(\"0\", \"Wanda\")\n",
+        "\n",
+        "    tree_2.edge(\"2\", \"Nurul\")\n",
+        "    tree_2.edge(\"2\", \"Tari\")\n",
+        "\n",
+        "    tree_2.edge(\"8\", \"Yanto\")\n",
+        "    tree_2.edge(\"8\", \"Gunawan\")\n",
+        "\n",
+        "    tree_2.edge(\"4\", \"3\")\n",
+        "    tree_2.edge(\"3\", \"Hamzah\")\n",
+        "    tree_2.edge(\"3\", \"Eka\")\n",
+        "    tree_2.edge(\"Eka\", \"Anggun\")\n",
+        "\n",
+        "    tree_2.edge(\"4\", \"Bastian\")\n",
+        "    tree_2.edge(\"Bastian\", \"Boy\")\n",
+        "\n",
+        "    return tree_2\n",
+        "\n",
+        "# Create and render the trees\n",
+        "if __name__ == \"__main__\":\n",
+        "    tree_1 = create_tree_1()\n",
+        "    tree_2 = create_tree_2()\n",
+        "\n",
+        "    # Render the diagrams to files\n",
+        "    tree_1.render(\"Pohon_1\", cleanup=True)\n",
+        "    tree_2.render(\"Pohon_2\", cleanup=True)\n",
+        "\n",
+        "    print(\"Tree diagrams created and saved as PNG files.\")"
+      ],
+      "metadata": {
+        "id": "ViNZIHrlg392",
+        "outputId": "81f032bb-2ab2-4968-9b35-a4fad09a46f6",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Tree diagrams created and saved as PNG files.\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Welcome To Colab",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
